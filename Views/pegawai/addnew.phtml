@@ -1,0 +1,54 @@
+<div class="col-lg-12">
+    <?php echo (isset($msg)) ? $msg : ''; ?>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Form Tambah Pegawai<br/>
+        </div>
+
+        <div class="panel-body">
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <form role="form" method="post" action="<?php echo site('pegawai/save') ?>">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input class="form-control" name="nama" value="<?php echo (isset($request['nama'])) ? $request['nama'] : '' ?>">					
+                        </div>
+                        <div class="form-group">
+                            <label>Posisi</label>
+                            <select class="form-control chosen-dropdown" data-allows-new-values="true" name="posisi">
+                                <option value="kpl">Kepala Resort</option>
+                                <option value="res">Pemegang Resort</option>
+                                <option value="ksr">Kasir</option>
+                                <option value="pks">Pembatu kasir</option>
+                                <option value="lai">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal Masuk</label>
+                            <div id="dp3" class="input-append date" data-date-format="yyyy-mm-dd">
+                                <input name="tgl_masuk" class="span2" type="text" readonly="" value="<?php echo date('Y-m-d'); ?>" size="16">
+                                <span class="add-on">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <textarea rows="3" name="alamat" class="form-control"><?php echo (isset($request['alamat'])) ? $request['alamat'] : '' ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Gaji pokok</label>
+                            <input class="form-control" name="gaji_pokok" value="<?php echo (isset($request['gaji_pokok'])) ? $request['gaji_pokok'] : '' ?>">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <button class="btn btn-default" type="reset">Reset</button>
+                    </form>
+                </div>			
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+</div>

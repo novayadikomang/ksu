@@ -1,0 +1,73 @@
+<div class="col-lg-12">
+<?php echo (isset($msg))?$msg:'';?>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Form Perubahan Data Target<br/>
+	</div>
+
+<div class="panel-body">
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-6">
+			<form role="form" method="post" action="<?php echo site('pinjaman/update/'.$request['id_pinjaman'])?>">				
+				<div class="form-group">
+					<label>Resort</label>
+					<select name="id_resort" class="form-control chosen-dropdown" id="resort_load" data-placeholder="Pilih resort">
+						<option value="0"></option>
+						<?php foreach($resorts as $text):?>	
+						<?php $selected = '';?>
+						<?php if($text['id_resort'] == $request['id_resort']) $selected = 'selected ="selected"'?>
+						<option <?php echo $selected ;?> value="<?php print $text['id_resort'];?>"><?php echo $text['kode'];?></option>						
+						<?php endforeach;?>
+					</select>
+					<div class="loading" style="display:none;">Loading....</div>
+				</div>
+				<div class="response">
+					<div class="form-group">
+						<label>Anggota</label>
+
+						<select name="id_anggota" class="form-control chosen-dropdown" id="anggota" data-placeholder="Pilih anggota">
+							<option value="0"></option>
+							<?php foreach($anggota as $_anggota):?>		
+								<?php $selected = '';?>
+								<?php if($_anggota['id_anggota'] == $request['id_anggota']) $selected = 'selected ="selected"'?>
+								<option <?php echo $selected;?> value="<?php print $_anggota['id_anggota'];?>"><?php echo $_anggota['nama_anggota'];?></option>						
+							<?php endforeach;?>
+						</select>	
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Tanggal Pinjam</label>
+					<div id="dp3" class="input-append date" data-date-format="yyyy-mm-dd">
+					<input name="tgl_mulai" class="span2" type="text" readonly="" value="<?php echo (isset($request['tgl_mulai']))? $request['tgl_mulai']:date('Y-m-d') ?>" size="16">
+					<span class="add-on">
+					<i class="fa fa-calendar"></i>
+					</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Lama cicilan</label>
+					<input class="form-control" name="lama" value="<?php echo (isset($request['lama']))? $request['lama']:'' ?>">		
+				</div>
+				<div class="form-group">
+					<label>Pinjaman pokok</label>
+					<input class="form-control" id="pinj_pokok" name="pokok" value="<?php echo (isset($request['pokok']))? $request['pokok']:'' ?>">		
+				</div>
+				<div class="form-group">
+					<label>Total Pinjaman</label>
+					<input disabled="disabled" class="form-control" id="pinj_total" name="total" value="<?php echo (isset($request['total']))? $request['total']:'' ?>">		
+				</div>
+				<div class="form-group">
+					<label>Keterangan tambahan</label>
+					<textarea cols="70" rows="4" name="keterangan"><?php echo (isset($request['keterangan']))? $request['keterangan']:'' ?></textarea>
+				</div>
+				<button class="btn btn-primary" type="submit">Update</button>
+				<button class="btn btn-default" type="reset">Reset</button>
+			</form>
+        </div>			
+	</div>
+	<!-- /.row -->
+</div>
+</div>
+
+</div>

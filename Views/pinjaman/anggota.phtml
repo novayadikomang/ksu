@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="http://localhost/koperasi/Layout/libs/chosen/chzn.css" type="text/css" />
+<div class="form-group">
+	<label>Anggota</label>
+
+	<select name="id_anggota" class="form-control chosen-dropdown" id="anggota" data-placeholder="Pilih anggota">
+		<option value="0"></option>
+		<?php foreach($anggota as $_anggota):?>					
+			<option value="<?php print $_anggota['id_anggota'];?>"><?php echo $_anggota['nama_anggota'];?></option>						
+		<?php endforeach;?>
+	</select>	
+</div>
+<!-- DataTables JavaScript -->
+	<script src="http://localhost/koperasi/Layout/libs/chosen/chosen.jquery.js"></script>
+	<script src="http://localhost/koperasi/Layout/libs/chosen/chzn.jquery.js"></script>  
+	 <script>
+    $(document).ready(function() {
+        $(".chosen-dropdown").chosen({no_results_text:'Data tidak ditemukan!'}); 
+				
+    });
+    </script>

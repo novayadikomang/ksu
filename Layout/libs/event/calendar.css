@@ -1,0 +1,32 @@
+/*
+ * CSS Calendar
+ * Tim Wright
+ * Chris Coyier
+ -----------------------------*/
+
+
+/*
+ * Day styles
+ -------------------------*/
+#event-kredit li li               {width:6em;height:6em;float:left;margin:.2em; padding:.2em;overflow:auto;
+					 background: url(images/day-bg.png) bottom right no-repeat; }
+#event-kredit li li.paid    { background: url(images/day-bg-inactive.png);}
+/*
+ * Day content (UL/OL & P)
+ -------------------------*/
+#event-kredit li li p             {font-size:.7em;display:block;}
+#event-kredit li li ol            {width:auto;}
+#event-kredit li li ul li,
+#event-kredit li li ol li         {font-size:.7em;display:block;height:auto;width:auto; background: none;
+					 margin:0;padding:.2em 0;float:none;}
+
+/*
+ * Holiday class
+ -------------------------*/
+#event-kredit li li.holiday       {  }
+
+/*
+ * Inactive months
+ -------------------------*/
+#event-kredit li#lastmonth li,
+#event-kredit li#nextmonth li     { background: url(images/day-bg-inactive.png);}

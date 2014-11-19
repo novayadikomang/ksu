@@ -1,0 +1,43 @@
+Time : 08:54:46
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_resort' in 'field list'
+Raw SQL : INSERT INTO tbl_simpanan (id_resort,id_anggota,tgl_simpan,saldo) VALUES (:id_resort,:id_anggota,:tgl_simpan,:saldo)
+
+Time : 07:29:57
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (kredit,total,user_id,ket) VALUES (:kredit,:total,:user_id,:ket)
+
+Time : 07:29:21
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (kredit,total,user_id,ket) VALUES (:kredit,:total,:user_id,:ket)
+
+Time : 07:29:10
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''potongan'' at line 1
+Raw SQL : SELECT `value` FROM `tbl_globals` WHERE `option` 'potongan'
+
+Time : 07:27:45
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option = 'potongan'' at line 1
+Raw SQL : SELECT value FROM tbl_globals WHERE option = 'potongan'
+
+Time : 07:26:55
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option = 'potongan'' at line 1
+Raw SQL : SELECT value FROM tbl_globals WHERE option = 'potongan'
+
+Time : 07:26:30
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option = 'potongan'' at line 5
+Raw SQL : SELECT value 
+			FROM 
+			tbl_globals 
+			WHERE 
+			option = 'potongan'
+
+Time : 06:57:44
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tgl_daftar' in 'field list'
+Raw SQL : UPDATE tbl_pinjaman SET tgl_daftar = :tgl_daftar,nama_pinjaman = :nama_pinjaman,no_tlp = :no_tlp,alamat = :alamat,status = :status WHERE id_pinjaman= :id_pinjaman
+
+Time : 05:28:40
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''tbl_anggota'  WHERE  'id_resort' = 5' at line 1
+Raw SQL : SELECT *  FROM  'tbl_anggota'  WHERE  'id_resort' = 5
+
+Time : 05:28:15
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''tbl_anggota'  WHERE  'id_resort' = '5'' at line 1
+Raw SQL : SELECT *  FROM  'tbl_anggota'  WHERE  'id_resort' = '5'

@@ -1,0 +1,73 @@
+Time : 10:03:42
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'alamt' in 'field list'
+Raw SQL : INSERT INTO tbl_anggota (tgl_daftar,nama_anggota,no_tlp,alamt) VALUES (:tgl_daftar,:nama_anggota,:no_tlp,:alamt)
+
+Time : 09:41:11
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tbl_user.user_id' in 'where clause'
+Raw SQL : SELECT tbl_user.username 
+			FROM 
+			tbl_user 
+			WHERE 
+			tbl_user.user_id = '1'
+
+Time : 09:36:18
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (tanggal,debet,kredit,total,user_id,ket) VALUES (:tanggal,:debet,:kredit,:total,:user_id,:ket)
+
+Time : 09:36:07
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (tanggal,debet,kredit,total,user_id,ket) VALUES (:tanggal,:debet,:kredit,:total,:user_id,:ket)
+
+Time : 09:34:53
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (tanggal,debet,kredit,total,user_id,ket) VALUES (:tanggal,:debet,:kredit,:total,:user_id,:ket)
+
+Time : 09:34:40
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_trans`, CONSTRAINT `tbl_trans_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id_user`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_trans (tanggal,debet,kredit,total,user_id,ket) VALUES (:tanggal,:debet,:kredit,:total,:user_id,:ket)
+
+Time : 08:56:02
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_resort`, CONSTRAINT `tbl_resort_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`) ON DELETE CASCADE ON UPDATE CASCADE)
+Raw SQL : UPDATE tbl_resort SET kode = :kode,ketua = :ketua,id_pegawai = :id_pegawai WHERE id_resort= :id_resort
+
+Time : 08:55:53
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_resort`, CONSTRAINT `tbl_resort_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`) ON DELETE CASCADE ON UPDATE CASCADE)
+Raw SQL : UPDATE tbl_resort SET kode = :kode,ketua = :ketua,id_pegawai = :id_pegawai WHERE id_resort= :id_resort
+
+Time : 08:55:19
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_resort`, CONSTRAINT `tbl_resort_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`) ON DELETE CASCADE ON UPDATE CASCADE)
+Raw SQL : UPDATE tbl_resort SET kode = :kode,ketua = :ketua,id_pegawai = :id_pegawai WHERE id_resort= :id_resort
+
+Time : 08:54:00
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_resort`, CONSTRAINT `tbl_resort_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`) ON DELETE CASCADE ON UPDATE CASCADE)
+Raw SQL : UPDATE tbl_resort SET kode = :kode,ketua = :ketua,id_pegawai = :id_pegawai WHERE id_resort= :id_resort
+
+Time : 08:28:02
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'koperasi_db.target' doesn't exist
+Raw SQL : SELECT * FROM target
+
+Time : 07:16:18
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'posisi' in 'field list'
+Raw SQL : UPDATE tbl_resort SET id_pegawai = :id_pegawai,posisi = :posisi,alamat = :alamat,tgl_masuk = :tgl_masuk,gaji_pokok = :gaji_pokok,nama = :nama WHERE id_resort= :id_resort
+
+Time : 07:01:31
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'kpl' in 'where clause'
+Raw SQL : SELECT
+			tbl_pegawai.nama,
+			tbl_pegawai.id_pegawai
+			FROM
+			tbl_pegawai
+			WHERE
+			tbl_pegawai.posisi = kpl
+
+Time : 05:27:43
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'koperasi_db.users' doesn't exist
+Raw SQL : SELECT * FROM users
+
+Time : 04:15:36
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'koperasi_db.users' doesn't exist
+Raw SQL : UPDATE users SET address = :address,name = :name WHERE username= :username
+
+Time : 03:52:56
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'koperasi_db.users' doesn't exist
+Raw SQL : SELECT * FROM users

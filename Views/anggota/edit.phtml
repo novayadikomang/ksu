@@ -1,0 +1,42 @@
+<div class="col-lg-12">
+<?php echo (isset($msg))?$msg:'';?>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Form Perubahan Data Target<br/>
+	</div>
+
+<div class="panel-body">
+
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-6">
+			<form role="form" method="post" action="<?php echo site('anggota/update/'.$request['id_anggota'])?>">				
+				<div class="form-group">
+					<label>Nama Anggota</label>
+					<textarea cols="70" rows="2" name="nama_anggota"><?php echo (isset($request['nama_anggota']))? $request['nama_anggota']:'' ?></textarea>
+				</div>
+				<div class="form-group">
+					<label>Telephone</label>
+					<input class="form-control" name="no_tlp" value="<?php echo (isset($request['no_tlp']))? $request['no_tlp']:'' ?>">		
+				</div>
+				<div class="form-group">
+					<label>Alamat</label>
+					<textarea cols="70" rows="4" name="alamat"><?php echo (isset($request['alamat']))? $request['alamat']:'' ?></textarea>
+				</div>
+				<div class="form-group">
+					<label>Alamat</label>
+					<select class="form-control chosen-dropdown" data-allows-new-values="true" name="status">						
+						<option <?php echo ($request['status'])? 'selecetd="selected"': '';?> value="1">Aktif</option>
+						<option <?php echo (!$request['status'])? 'selecetd="selected"': '';?> value="0">Tidak Aktif</option>
+					</select>
+				</div>
+				<button class="btn btn-primary" type="submit">Update</button>
+				<button class="btn btn-default" type="reset">Reset</button>
+			</form>
+        </div>			
+	</div>
+	<!-- /.row -->
+</div>
+</div>
+
+</div>
