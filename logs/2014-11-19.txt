@@ -1,0 +1,7 @@
+Time : 08:29:42
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_pinjaman`, CONSTRAINT `tbl_pinjaman_ibfk_2` FOREIGN KEY (`id_resort`) REFERENCES `tbl_resort` (`id_resort`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_pinjaman (id_resort,id_anggota,tgl_mulai,lama,pokok,bunga,total,keterangan,tanggal) VALUES (:id_resort,:id_anggota,:tgl_mulai,:lama,:pokok,:bunga,:total,:keterangan,:tanggal)
+
+Time : 08:29:36
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`koperasi_db`.`tbl_pinjaman`, CONSTRAINT `tbl_pinjaman_ibfk_2` FOREIGN KEY (`id_resort`) REFERENCES `tbl_resort` (`id_resort`) ON DELETE NO ACTION ON UPDATE CASCADE)
+Raw SQL : INSERT INTO tbl_pinjaman (id_resort,id_anggota,tgl_mulai,lama,pokok,bunga,total,keterangan,tanggal) VALUES (:id_resort,:id_anggota,:tgl_mulai,:lama,:pokok,:bunga,:total,:keterangan,:tanggal)
